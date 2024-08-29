@@ -15,8 +15,10 @@ public class SeleniumTest {
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
-        // LambdaTest Hub URL
-        String hubURL = "https://belalahmad:cousQqH3syuMR3H55LiQfG4QqCyPHRsZs3XJ3mbEle94hOdYLj@hub.lambdatest.com/wd/hub";
+        // LambdaTest Hub URL with credentials
+        String username = "belalahmad";
+        String accessKey = "cousQqH3syuMR3H55LiQfG4QqCyPHRsZs3XJ3mbEle94hOdYLj";
+        String hubURL = "https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub";
 
         // Desired Capabilities for LambdaTest
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -25,6 +27,8 @@ public class SeleniumTest {
         capabilities.setCapability("platformName", "Windows 10"); // Change platform as needed
         capabilities.setCapability("build", "Selenium Test Build");
         capabilities.setCapability("name", "Selenium Test");
+        capabilities.setCapability("user", username); // Set username explicitly
+        capabilities.setCapability("accessKey", accessKey); // Set access key explicitly
         capabilities.setCapability("network", true); // Enable network logs
         capabilities.setCapability("visual", true);  // Enable visual logs
         capabilities.setCapability("video", true);   // Enable video recording
