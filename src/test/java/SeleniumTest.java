@@ -30,6 +30,7 @@ public class SeleniumTest {
         ltOptions.put("username", "belalahmad");
         ltOptions.put("accessKey", "cousQqH3syuMR3H55LiQfG4QqCyPHRsZs3XJ3mbEle94hOdYLj");
         ltOptions.put("project", "BelalWebTest");
+        ltOptions.put("build","Belal Web Automation Test");
         ltOptions.put("selenium_version", "4.0.0");
         ltOptions.put("w3c", true);
         browserOptions.setCapability("LT:Options", ltOptions);
